@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(113, 14, 87, 0.811);
+    background-size: cover;
+  }
+  
+  .slam-book-container {
+    width: 500px;
+    border: 3px solid black;
+    border-top: none;
+    margin: 70px auto;
+    position: relative;
+    background-color: rgba(163, 18, 18, 0.811);
+  
+    flex-direction: column;
+   
+    padding: 5px;
+  }
+  
+  .slam-book-container-title {
+    position: relative;
+    top: -12px;  /* Slightly raised */
+    left: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+/* Left part of the border */
+.slam-book-container::before {
+  content: '';
+  position: absolute;
+  top: 0;  /* Align perfectly with box border */
+    left: 0;
+    height: 4px;
+    width: 20px;  /* Cut before the text */
+    background-color: black;
+
+}
+
+/* Right part of the border */
+.slam-book-container::after {
+  content: '';
+  position: absolute;
+  top: 0;  /* Align perfectly with box border */
+  right: 0;
+  height: 4px;
+  width: calc(100% - 180px);  /* Start after the text */
+  background-color: black;
+}
+
+  .content-box {
+    background-color: rgba(4, 255, 0, 0.5);  /* Yellow with low opacity */
+    border: 2px solid black;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+  }
+  
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  select {
+    width: 100%;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #af4c95;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
