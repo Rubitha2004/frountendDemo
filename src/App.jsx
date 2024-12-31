@@ -1,36 +1,46 @@
-//import Samplebook from './samplebook.jsx';
-//import './App.css';
+
 import React from 'react';
-import Home from './Home.jsx';
-import About from './About.jsx';
-import Contact from './Contact.jsx';
-import { BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom';
+import './App.css';
+import Home from './Home';
+import Aboutus from './About';
+import Contactus from './Contact';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+ // Ensure you have a logo image in the assets folder
+
 function App() {
-
-
   return (
-    
-     
     <Router>
-      <div>
-      <nav>
-        <ol>
-          <li><Link to="/">home</Link></li>
-          <li><Link to="/About">AboutUs</Link></li>
-          <li><Link to="/Contact">ContactUs</Link></li>
-        </ol>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/About" element={<About/>}/>
-        <Route path="/Contact" element={<Contact/>}/>
-
-      </Routes>
+      <div className="app">
+        <header>
+          <nav>
+            <ul>
+              <li className="logo">
+                <Link to="/">
+                  <img src="images/pic.jpeg"  />Ruby
+                </Link>
+                
+              </li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/aboutus">About Us</Link></li>
+              <li><Link to="/contactus">Contact Us</Link></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/contactus" element={<Contactus />} />
+          </Routes>
+        </main>
+        <footer>
+          <p>
+            <Link to="/">&copy; 2023 Your Bags. All rights reserved.</Link>
+          </p>
+        </footer>
       </div>
     </Router>
-  
-      
-  )
+  );
 }
 
-export default App
+export default App;

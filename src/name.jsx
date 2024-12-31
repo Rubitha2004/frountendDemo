@@ -4,7 +4,7 @@ function Name(){
     return (
         <>
         <div>
-            <Human name="rubi"
+            <Human name="rubi"    
              a={5} b={4}/>
 
         </div>

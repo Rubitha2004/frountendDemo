@@ -1,122 +1,205 @@
+h1 {
+  text-align: center;
+  background-color: #2390d0; /* Green background */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5em;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1:hover {
+  background-color: #860c88; /* Darker green on hover */
+  color: white;
+}
+
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #c287cf; /* Blue background */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li.logo {
+  margin-right: auto;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffeb3b; /* Yellow on hover */
+}
+
+nav ul li img {
+  height: 40px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: #8acbe7; /* Blue background */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgba(113, 14, 87, 0.811);
-    background-size: cover;
-  }
-  
-  .slam-book-container {
-    width: 500px;
-    border: 3px solid black;
-    border-top: none;
-    margin: 70px auto;
-    position: relative;
-    background-color: rgba(163, 18, 18, 0.811);
-  
-    flex-direction: column;
-   
-    padding: 5px;
-  }
-  
-  .slam-book-container-title {
-    position: relative;
-    top: -12px;  /* Slightly raised */
-    left: 15px;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 0 10px;
-    background-color: transparent;
-    z-index: 1;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #3f939e; /* Light blue background */
+  background-image: url('./images/fit.jpeg'); /* Add your background image path here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Left part of the border */
-.slam-book-container::before {
-  content: '';
-  position: absolute;
-  top: 0;  /* Align perfectly with box border */
-    left: 0;
-    height: 4px;
-    width: 20px;  /* Cut before the text */
-    background-color: black;
-
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-/* Right part of the border */
-.slam-book-container::after {
-  content: '';
-  position: absolute;
-  top: 0;  /* Align perfectly with box border */
-  right: 0;
-  height: 4px;
-  width: calc(100% - 180px);  /* Start after the text */
-  background-color: black;
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-  .content-box {
-    background-color: rgba(4, 255, 0, 0.5);  /* Yellow with low opacity */
-    border: 2px solid black;
-    padding: 20px;
-    width: 350px;
-    text-align: center;
-    border-radius: 10px;
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input,
-  select,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  textarea {
-    resize: none;
-    height: 100px;
-  }
-  
-  input[type="radio"],
-  input[type="checkbox"] {
-    width: auto;
-    margin-right: 5px;
-  }
-  
-  input[type="radio"] + label,
-  input[type="checkbox"] + label {
-    display: inline-block;
-    margin-right: 15px;
-  }
-  
-  select {
-    width: 100%;
-  }
-  
-  .submit-btn {
-    padding: 10px 20px;
-    background-color: #af4c95;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+
+.form-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.submit-btn:hover {
-    background-color: #45a049;
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #428db2; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(40, 100, 220, 0.5); /* Green shadow on focus */
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.checkbox-group-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start for straight alignment */
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2e97bc; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #282fb8; /* Darker green on hover */
+  color: white;
+}
+
+/* Container styles */
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container p {
+  font-size: 1.2em;
+  color: #666;
+  line-height: 1.6;
+}
+
+.page-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.icon-right {
+  float: right;
+  font-size: 1.5em;
+  color: #2390d0; /* Match the color with your theme */
+  margin-left: 10px;
 }
