@@ -10,7 +10,7 @@ const UpdateUser = () => {
   const[address,setAddress]=useState('');
   const update = (e) => {
     e.preventDefault();
-    axios.put(`https://backenddemo-q48u.onrender.com/${id}`,{name,email,address})
+    axios.put(`https://backenddemo-q48u.onrender.com/api/user/update/${id}`,{name,email,address})
     .then(res=>{
       console.log(res);
     })

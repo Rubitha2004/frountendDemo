@@ -19,7 +19,7 @@ useEffect(()=>{
     });
 }, []);
 const deleteUser = (id) => {
-    axios.delete("https://backenddemo-q48u.onrender.com/api/user/delete/${id}"
+    axios.delete(`https://backenddemo-q48u.onrender.com/api/user/delete/${id}`
 )
     .then(res=>{
         console.log(res);
