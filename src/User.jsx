@@ -1,8 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-
-
+import './User.css'; // Import the CSS file for styling
 
 function User(){
    
@@ -31,10 +30,10 @@ const deleteUser = (id) => {
 }
 
 return(
-    <div>
+    <div className="user-container">
         <h1> User Component</h1>
         
-        <table>
+        <table className="user-table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -50,16 +49,18 @@ return(
                             <td>{users.name}</td>
                             <td>{users.email}</td>
                             <td>{users.address}</td>
-                            <td><button><Link to={`/update/${users._id}`}>Update</Link></button></td>
-                            <td><button onClick={() => deleteUser(users._id)}>Delete</button></td>
+                            <td><button className="update-button"><Link to={`/update/${users._id}`}>Update</Link></button></td>
+                            <td><button className="delete-button" onClick={() => deleteUser(users._id)}>Delete</button></td>
 
                         </tr>
                     ))
                 }
             </tbody>
         </table>
-        <button><Link to="/create">Create User</Link></button><br/>
-        <button><Link to="/update">Update</Link></button>
+        <div className="button-group">
+            <button className="create-button"><Link to="/create">Create User</Link></button><br/>
+            <button className="update-all-button"><Link to="/update">Update</Link></button>
+        </div>
     </div>
 );
 }
