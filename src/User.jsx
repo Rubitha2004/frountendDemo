@@ -32,7 +32,7 @@ function User() {
         {`
 
         body {
-            background-image: url('./src/assets/light.webp');
+            background-image: url('./assets/light.webp');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -40,7 +40,7 @@ function User() {
 
           .container {
             margin-top: 50px;
-            background-image: url('./src/assets/image.jpg');
+            background-image: url('./assets/image.jpg');
             background-size: cover;
             padding: 30px;
             border-radius: 10px;
