@@ -37,7 +37,7 @@ body {
   
   button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #4193b6;
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,7 +45,7 @@ body {
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #2ab32c;
   }
   
   .link-button {
